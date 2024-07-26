@@ -27,9 +27,9 @@ void set_value_and_log(uint channel, uint value_usec) {
 
 }
 int main() {
-    setup_default_uart();
-    uint pin = 3;
-    ppm_program_init(pio0, pin);
+    // setup_default_uart();
+    uint pin = 4;
+    ppm_program_init(pio1, pin);
     while (1) {
         set_value_and_log(1, 1100);
         set_value_and_log(8, 1800);
@@ -39,4 +39,3 @@ int main() {
         sleep_ms(1000);
     }
 }
-
